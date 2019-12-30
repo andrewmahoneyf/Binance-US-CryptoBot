@@ -1,0 +1,40 @@
+{
+  "name": "cryptobot-us",
+  "version": "0.1.0",
+  "description": "Trading bot for Binance US automation and MACD gainz",
+  "main": "app.js",
+  "engines": {
+    "node": ">=0.12"
+  },
+  "dependencies": {
+    "chart_utils": "^1.0.5",
+    "dotenv": "^8.0.0",
+    "moment": "^2.24.0",
+    "node-cron": "^2.0.3",
+    "ora": "^3.4.0",
+    "us-binance-api-node": "^0.9.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.5.5",
+    "@babel/core": "^7.5.5",
+    "@babel/node": "^7.5.5",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-syntax-import-meta": "^7.2.0",
+    "@babel/preset-env": "^7.5.5",
+    "eslint": "5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "nodemon": "^1.19.1"
+  },
+  "scripts": {
+    "start:dev": "NODE_ENV=dev nodemon --exec babel-node src/app",
+    "start": "yarn build && NODE_ENV=production babel-node dist/app",
+    "clean": "rm -rf dist && mkdir dist",
+    "build-server": "babel src -s -d dist",
+    "build": "yarn clean && yarn build-server",
+    "lint": "eslint src/**"
+  },
+  "author": "Andrew Mahoney-Fernandes",
+  "license": "ISC"
+}
