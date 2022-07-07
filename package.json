@@ -9,7 +9,7 @@
   "dependencies": {
     "chart_utils": "^1.0.5",
     "dotenv": "^8.0.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "node-cron": "^2.0.3",
     "ora": "^3.4.0",
     "us-binance-api-node": "^0.9.10"
